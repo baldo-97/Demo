@@ -1,0 +1,8 @@
+es:
+  global:
+    menu:
+      Home: 'Inicio'
+      Products: 'Productos'
+      Log out: 'Cerrar sesion'
+      Sign up: 'Registrarse'
+      Log in: 'Iniciar sesion'

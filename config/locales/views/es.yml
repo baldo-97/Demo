@@ -1,0 +1,26 @@
+es:
+  views:
+    sales:
+      index:
+        Product_Name: 'Nombre del producto'
+        Price: 'Precio'
+        Sold_Quantity: 'Cantidad vendia'
+        Sale_Date: 'Fecha de venta'
+        Total_Sale: 'Ganancia total'
+        Edit: 'Editar'
+        Delete: 'Eliminar'
+        Add_Product: 'Agregar Producto'
+  helpers:
+    submit:
+      user:
+        create: "Guardar %{model}"
+  users:
+    new:
+      form:
+        error: 'Oops !! parece que algo salio mal'
+  sales:
+    new:
+      form:
+        error: 'Oops !! parece que algo salio mal'
+    index:
+      form:

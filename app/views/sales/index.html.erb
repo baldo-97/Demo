@@ -1,0 +1,33 @@
+<p class="title">Ventas de <%= current_user.name %></p>
+<div class="columns is-desktop is-multiline">
+  <div class="card content">
+    <table class="table is-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th><%= t('views.sales.index.Product_Name') %></th>
+          <th><%= t('views.sales.index.Price') %></th>
+          <th><%= t('views.sales.index.Sold_Quantity') %></th>
+          <th><%= t('views.sales.index.Sale_Date') %></th>
+          <th><%= t('views.sales.index.Total_Sale') %></th>
+        </tr>
+      </thead>
+        <tbody>
+          <% @sales.each do |sale| %>
+          <tr>
+            <th><%= link_to( sale.id, sale_path(sale)) %></th>
+            <td><%= sale.product_name %></td>
+            <td><%= sale.price %></td>
+            <td><%= sale.quantity %></td>
+            <td><%= sale.sale_date %></td>
+            <td><%= sale.price * sale.quantity %></td>
+            <td><%= link_to t("views.sales.index.Edit"), controller: "sales", action: "edit", id: sale.id %><td>
+            <td><%= link_to t("views.sales.index.Delete"), sale_path(sale), method: 'delete', data: { confirm: 'Are you sure?' }  %><td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
+<%= link_to t('views.sales.index.Add_Product'), new_sale_path, class: 'button is-success' %>
+<%== pagy_bulma_nav(@pagy) %>

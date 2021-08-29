@@ -1,0 +1,39 @@
+es:
+  activerecord:
+    models:
+      user:
+        one: 'Usuario'
+        other: 'Usuarios'
+    attributes:
+      user:
+        name: 'Nombre'
+        email: 'Correo electronico'
+        password: 'Contraseña'
+      sale:
+        product_name: 'Nombre de producto'
+        price: 'Precio'
+        quantity: 'Cantidad'
+        sale_date: 'Fecha de venta'
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'es un campo requerido'
+            email:
+              blank: 'es un campo requerido'
+              taken: 'este correo ya no esta disponible'
+            password:
+              blank: 'es un campo requerido'
+            password_confirmation:
+              confirmation: 'La contraseña no es identica'
+        sale:
+          attributes:
+            product_name:
+              blank: 'es un campo requerido'
+            price:
+              blank: 'es un campo requerido'
+            quantity:
+              blank: 'es un campo requerido'
+            sale_date:
+              blank: 'es un campo requerido'    

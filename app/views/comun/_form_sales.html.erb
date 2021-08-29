@@ -1,0 +1,36 @@
+
+  <%= form_for @sale, builder: BulmaFormBuilder do |f| %>
+    <%= f.form_error %>
+      <div class="field">
+      <%= f.label :product_name, class: 'label' %>
+        <div class="control">
+        <%= f.text_field :product_name, class: 'input' %>
+        </div>
+        <%= f.field_error :product_name %>
+      </div>
+
+      <div class="field">
+      <%= f.label :price, class: 'label' %>
+        <div class="control">
+        <%= f.text_field :price, class: 'input' %>
+        </div>
+        <%= f.field_error :price %>
+      </div>
+
+      <div class="field">
+      <%= f.label :quantity, class: 'label' %>
+        <div class="control">
+        <%= f.text_field :quantity, class: 'input' %>
+        </div>
+        <%= f.field_error :quantity %>
+      </div>
+
+      <div class="field">
+      <%= f.label :sale_date, class: 'label' %>
+        <div class="control">
+        <%= f.date_field :sale_date, class: 'input' %>
+        </div>
+        <%= f.field_error :sale_date %>
+      </div>
+    <%= submit_tag nil, class: 'button is-success' %>
+  <% end %>
